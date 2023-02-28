@@ -1,0 +1,38 @@
+<input type="button" value="Home" class="btn btn-info" style="align-content:center;" (click)="showHomePage()">
+&nbsp;
+<input type="button" value="Admin" class="btn btn-info" style="align-content:center;" (click)="showAdminPage()">
+&nbsp;&nbsp;
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Update Here
+            </div>
+            <div class="card-body">
+                
+                <form #myform="ngForm">
+                    Name :
+                    <input type="text"  class="form-control"  [(ngModel)]="medicine.name" name="name" />
+                    <br />    
+                    Description:
+                    <input type="text"  class="form-control"  [(ngModel)]="medicine.pdesc" name="pdesc" />
+                    <br />
+                    Price:
+                    <input type="text"  class="form-control"   [(ngModel)]="medicine.price"  name="price"/>
+                    <br />
+                    Seller:
+                    <input type="text"  class="form-control"   [(ngModel)]="medicine.seller"  name="seller"/>
+                    <br />                    
+                    <input type="button"  value="Update Here"  class="btn btn-primary" (click)="updateMedicineIN()"/>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+
+
+

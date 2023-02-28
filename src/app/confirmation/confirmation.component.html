@@ -1,0 +1,14 @@
+<input type="button" value="HomePage" class="btn btn-primary" (click)="showHomePage()"><br/>   
+<!--Once Payment Clicked show the Cart Items-->
+<div class="row">
+    <div class="col-md-3"></div>
+       <div class="col-md-6">
+          <h1> Items Selected:</h1>
+          <div *ngFor="let med of medicineSelected">
+             {{ med}}
+          </div>
+          <br/>
+        </div>      
+     <div class="col-md-3"></div>
+     <input type="button" value="Confirm Order" class="btn btn-success" (click)="showPayment()"> 
+  </div> 

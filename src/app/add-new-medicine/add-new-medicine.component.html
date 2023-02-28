@@ -1,0 +1,28 @@
+<input type="button" value="Home" class="btn btn-info" style="align-content:center;" (click)="showHomePage()">
+&nbsp;
+
+<input type="button" value="Admin" class="btn btn-info" style="align-content:center;" (click)="showAdminComponent()">
+&nbsp;&nbsp;
+<br/><br/><br/><br/><br/>
+<h1 style="text-align: center;">Add New Medicine:</h1>
+<br/><br/>
+<div class="d-flex justify-content-center">
+<div class="card align-center" style="width: 18rem;">
+    
+    <div>
+        
+        <h5>Name:</h5>
+        <input type="text"  class="form-control" [(ngModel)]="medicine.name" name="medName"><br/>
+        <h5>Description:</h5>
+        <input type="text" class="form-control"  [(ngModel)]="medicine.pdesc"  name="medDesc" ><br/>
+        <h5>Price:</h5>
+        <input type="text" class="form-control"  [(ngModel)]="medicine.price"  name="medPrice" ><br/>
+        <h5>Seller:</h5>
+        <input type="text" class="form-control"  [(ngModel)]="medicine.seller"  name="medSeller" ><br/>
+        <div class="d-flex justify-content-center">
+            <input type="button" value="Add" class="btn btn-primary" style="align-content:center;" (click)="CreateNewMedicine()" >
+        </div>
+    </div>
+</div>
+</div>
+

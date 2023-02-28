@@ -1,0 +1,36 @@
+<button type="button" class="btn btn-info" (click)="showAddNewMedicineComponent()">Add New Medicine</button>
+<button type="button" class="btn btn-info" (click)="showHomePage()">Home Page</button>
+<br/><br/><br/><br/><br/><br/>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+    <table  style="height: 100px;" class="table table-bordered" mt-10>
+        <tr>
+          <th><i class="fa-solid fa-tablets"></i>Item ID</th>
+          <th><i class="fa-solid fa-prescription"></i>Name</th>
+          <th><i class="fa-solid fa-prescription-bottle-medical"></i>Description</th>
+          <th><i class="fa-solid fa-prescription-bottle"></i>Price</th>
+          <th><i class="fa-sharp fa-solid fa-house-medical"></i>Seller</th>      
+          <th><i class="fa-solid fa-check"></i>Select</th>  
+        </tr>
+        
+        <tr *ngFor="let med of medicineInfo">
+            
+          <td>{{med.id}}</td>
+          <td>{{med.name}}</td>
+          <td>{{med.pdesc}}</td>
+          <td>{{med.price}}</td> 
+          <td>{{med.seller}}</td>    
+          <tbody>  
+            <td>
+              <button type="button" class="btn btn-success" (click)="showUpdateMedicine(med.id)">Update</button>
+            </td>
+            <td>
+             <button type="button" class="btn btn-danger" (click)=" deleteMedicne(med.id)">Delete</button>
+            </td>
+         </tbody>
+        </tr>   
+    </table>
+    </div>
+    <div class="col-md-3"></div>
+    </div>
